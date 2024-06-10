@@ -1,4 +1,5 @@
 require "module.options"
+require "module.keymaps"
 
 require "module.plugins"
 require "module.telescope"
