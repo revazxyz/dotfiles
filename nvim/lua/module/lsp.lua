@@ -2,6 +2,11 @@ local lsp_zero = require "lsp-zero"
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({ buffer = bufnr })
+
+  local opts = { buffer = bufnr }
+  vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+  vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+  vim.keymap.set("v", "<leader>fc", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 end)
 
 local cmp = require "cmp"
