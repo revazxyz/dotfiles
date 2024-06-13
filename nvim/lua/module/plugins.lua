@@ -13,10 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 plugins = {
   {
-    "andreasvc/vim-256noir",
+    "owickstrom/vim-colors-paramount",
     config = function()
-      vim.o.termguicolors = true
-      vim.cmd.colorscheme "256_noir"
+      vim.cmd.colorscheme "paramount"
     end,
   },
   {
